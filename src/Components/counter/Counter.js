@@ -46,7 +46,7 @@ const Counter = () => {
   const [minutes, setMinutes] = useState(0);
   const [dateInput, setDateInput] = useState("");
   const [currentWeather, setcurrentWeather] = useState("");
-  const [EFFECT, SETCURRENTEFFECT] = useState();
+  const [EFFECT, SETCURRENTEFFECT] = useState([]);
   const [hpLeo, setHpLeo] = useState(100);
   const [omLeo, setOmLeo] = useState(200);
   const [snLeo, setSnLeo] = useState(20);
@@ -95,6 +95,8 @@ const Counter = () => {
     localStorage.setItem("hour", JSON.stringify(hours));
     localStorage.setItem("minute", JSON.stringify(minutes));
   }, [day, month, year, hours, minutes]);
+
+  //padlo
 
   useEffect(() => {
     switch (month) {
